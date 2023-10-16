@@ -1,10 +1,14 @@
 import Link from 'next/link';
+import { getAllProductsFromDatabase } from '../../database/connect';
 import { products } from '../../database/products';
 import { getCookie } from '../util/cookies';
 import { parseJson } from '../util/json';
 
 export default function ProductsPage() {
   const productsCommentsCookie = getCookie('productsComments');
+  console.log(
+    getAllProductsFromDatabase().then((product) => console.log(product)),
+  );
 
   const productComments = !productsCommentsCookie
     ? []
@@ -21,8 +25,7 @@ export default function ProductsPage() {
 
   return (
     <div>
-      <h1>Order yourself a cyber attack</h1>
-      {products.map((product) => {
+      {productsWithComments.map((product) => {
         return (
           <div
             key={`product-${product.id}`}

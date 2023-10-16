@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "js-cookie": "^3.0.5",
     "next": "latest",
+    "postgres": "^3.4.0",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.68.0",
@@ -21,7 +23,7 @@
   "devDependencies": {
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.7",
-    "eslint-config-upleveled": "^5.0.4",
+    "eslint-config-upleveled": "^5.1.0",
     "stylelint": "^15.10.3",
     "stylelint-config-upleveled": "^1.0.2",
     "typescript": "^5.2.2"
