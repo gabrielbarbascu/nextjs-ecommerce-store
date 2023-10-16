@@ -4,7 +4,10 @@ import kaliWallpaper from '../public/images/kaliwllp.png';
 export default function HomePage() {
   return (
     <main>
-      <h1>"The quieter you become, the more you are able to hear"</h1>
+      <header>
+        "If you are not paying for it, you're not the customer, you're the
+        product being sold."
+      </header>
       <Image
         src="/images/kaliwllp.png"
         alt="Kali wallpaper"
