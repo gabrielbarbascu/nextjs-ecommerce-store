@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getProductById } from '../../../database/products';
-import { getCookie } from '../../util/cookies';
-import { parseJson } from '../../util/json';
+import { findProductById } from '../../../database/products';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../../util/json';
 import ProductCommentForm from './ProductCommentForm';
 
 type Props = {
@@ -11,9 +11,9 @@ type Props = {
   };
 };
 
-export default function SingleProductPage(props: Props) {
-  const product = getProductById(Number(props.params.productId));
-
+export default async function SingleProductPage(props: Props) {
+  const product = await findProductById(Number(props.params.productId));
+  console.log(product);
   if (!product) {
     notFound();
   }

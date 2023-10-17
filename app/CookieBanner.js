@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { parseJson } from '../util/json';
 import styles from './CookieBanner.module.scss';
 import { getLocalStorage, setLocalStorage } from './localStorage';
-import { parseJson } from './util/json';
 
 export default function CookieBanner() {
   const [areCookiesAccepted, setAreCookiesAccepted] = useState(false);

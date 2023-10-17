@@ -1,14 +1,10 @@
 import Link from 'next/link';
-import { getAllProductsFromDatabase } from '../../database/connect';
 import { products } from '../../database/products';
-import { getCookie } from '../util/cookies';
-import { parseJson } from '../util/json';
+import { getCookie } from '../../util/cookies';
+import { parseJson } from '../../util/json';
 
 export default function ProductsPage() {
   const productsCommentsCookie = getCookie('productsComments');
-  console.log(
-    getAllProductsFromDatabase().then((product) => console.log(product)),
-  );
 
   const productComments = !productsCommentsCookie
     ? []

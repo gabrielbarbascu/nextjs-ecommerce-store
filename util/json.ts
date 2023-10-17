@@ -1,5 +1,5 @@
 import sjson from 'secure-json-parse';
-import { ProductComment } from '../products/[productId]/actions';
+import { ProductComment } from '../app/products/[productId]/actions';
 
 export function parseJson(
   stringifiedJson: string,
